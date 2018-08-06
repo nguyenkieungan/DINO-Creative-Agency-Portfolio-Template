@@ -1,0 +1,13 @@
+// ======================================================
+// Layout :: Counter
+// ======================================================
+.single-counter {
+  text-align: center;
+  &__number {
+    color: $primary;
+    font-size: 62.46px;
+  }
+  &__title {
+    font-weight: $bold;
+  }
+}

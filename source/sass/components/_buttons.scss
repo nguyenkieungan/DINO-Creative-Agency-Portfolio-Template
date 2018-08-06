@@ -1,0 +1,18 @@
+// ======================================================
+// Components :: Buttons
+// ======================================================
+.btn {
+  background-color: $primary;
+  border-radius: inherit;
+  color: #fff;
+  &__aboutus {
+    text-transform: uppercase;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 70%;
+  }
+  &__introduction {
+    float: right;
+  }
+}

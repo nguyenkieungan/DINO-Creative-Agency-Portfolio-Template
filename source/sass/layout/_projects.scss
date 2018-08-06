@@ -1,0 +1,41 @@
+// ======================================================
+// Layout :: Projects
+// ======================================================
+.ourproject {
+  &-card {
+    background: #999;
+    height: 220px;
+    overflow: hidden;
+    &:nth-child(odd) {
+      background: #e5e5e5;
+    }
+    &__content {
+      text-align: center;
+      transform: translateX(-50%) translateY(50%);
+      position: relative;
+      overflow: hidden;
+      left: 50%;
+      font-size: 12.49px;
+      display: none;
+    }
+    &__title,
+    &__tag {
+      p {
+        color: $primary;
+      }
+    }
+    &__cat {
+      p {
+        color: #999;
+      }
+    }
+    &:hover {
+      background: #000;
+    }
+    &:hover & {
+      &__content {
+        display: block;
+      }
+    }
+  }
+}
