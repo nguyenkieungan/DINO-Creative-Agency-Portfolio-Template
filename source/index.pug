@@ -1,0 +1,21 @@
+include modules/_page-list/_page-list
+include modules/header/header
+include modules/footer/footer
+include modules/head/head
+include modules/navbar/navbar
+
+doctype html
+html
+  +head(head.home)
+  body
+    +nav("Dino Template", "dropdown_menu")
+      +nav_item( "index.html", "active" ) Home
+      +nav_item( "about.html" ) Portfolio
+      +nav_item( "service.html" ) Service
+      +nav_item( "" ) About
+      +nav_item( "" ) Blog
+      +nav_item( "" ) Contact
+        //- +nav_divider
+    div.page
+      +page-list(pageList.data)
+    +footer
