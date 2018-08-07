@@ -16,6 +16,7 @@
 
 // 3. Vendors
 // ----------
+@import 'vendors/bootstrap-override-variable';
 @import 'bootstrap';
 
 // 4. Layout
@@ -23,6 +24,8 @@
 @import 'layout/content';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/navbar';
+@import 'layout/counter';
 
 // 5. Components
 // -------------

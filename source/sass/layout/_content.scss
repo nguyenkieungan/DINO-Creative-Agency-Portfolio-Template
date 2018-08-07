@@ -1,3 +1,29 @@
 // ======================================================
 // Layout :: Content
 // ======================================================
+.main-content {
+  &__heading {
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+  &__icon {
+    float: left;
+    margin-right: 10px;
+    img {
+      width: 47px;
+      height: auto;
+    }
+  }
+  &__ictitle {
+    text-transform: uppercase;
+    font-weight: $bold;
+    font-size: 12.49px;
+    line-height: 47px;
+    margin: 0;
+  }
+  &__detail {
+    font-family: $text-font;
+    font-size: 12.49px;
+    margin-top: 20px;
+  }
+}
