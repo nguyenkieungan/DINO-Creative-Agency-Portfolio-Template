@@ -13,6 +13,7 @@
 @import 'base/typography';
 @import 'base/colors';
 @import 'base/images';
+@import 'base/spacing';
 
 // 3. Vendors
 // ----------
@@ -26,10 +27,13 @@
 @import 'layout/footer';
 @import 'layout/navbar';
 @import 'layout/counter';
+@import 'layout/projects';
+@import 'layout/clients';
 
 // 5. Components
 // -------------
 @import 'components/table';
+@import 'components/buttons';
 
 
 // 6. Pages

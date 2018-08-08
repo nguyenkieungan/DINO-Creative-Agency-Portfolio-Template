@@ -4,6 +4,8 @@ include modules/footer/footer
 include modules/head/head
 include modules/navbar/navbar
 include modules/counter/counter
+include modules/navs/navs
+include modules/clients
 doctype html
 html
   +head(head.home)
@@ -27,7 +29,7 @@ html
             img(src='https://bootstrapious.com/tutorial/carousel/img/carousel1.jpg')
             .overlay
             .carousel-caption
-              hh1.super-heading Lorem ipsum dolor color
+              h1.super-heading Lorem ipsum dolor color
               p.super-paragraph This is a demo for the Bootstrap Carousel Guide.
           .item
             img(src='https://bootstrapious.com/tutorial/carousel/img/carousel2.jpg')
@@ -53,7 +55,7 @@ html
       section.aboutus
         .container-fluid
           .row
-            .aboutus__intro.col-12.col-md-6
+            .aboutus__intro.col-12.col-md-6.pl-0.pr-0
               h2.main-content__heading Dino creative agency
               p.main-content__detail
                 | Successful businesses have many things in common,
@@ -61,7 +63,7 @@ html
                 <br/><br/>
                 | Both walk to the far side of the room, one of them slips through the crowd easily and unnoticed as they reach the far side.
                 | The second person takes much longer to reach the far side because they are engaged in conversations along the way as they continue to meet acquaintances and friends during their path. Which type of person would you like to model your business after?
-            .aboutus__thumb.col-12.col-md-6
+            .main-content__thumb.col-12.col-md-6.pl-0.pr-0
               img(src='images/aboutus-thumb.png')
       section.introduction
         .container
@@ -103,9 +105,56 @@ html
                 | You’re not feeling down or depressed but you’re quickly irritated, a bit tensed and anxious.
                 | Your spouse feels that situation and talks with you about it.
                 | You wave the problems away telling they don’t exists.
-              a.btn__introduction That's not all, check out more
+              a.btn.btn__introduction That's not all, check out more
       +counter
       section.ourproject
+        h2.main-content__heading.text-center Our Project
+        ul#myTab1.nav.nav-tabs(role='tablist')
+          li.nav-item
+            a#allproject-tab.nav-link.active(data-toggle='tab', href='#allproject', role='tab', aria-controls='allproject', aria-selected='true') All Project
+          li.nav-item
+            a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Web Development
+          li.nav-item
+            a#contact-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false') Branding
+        #myTab1Content.tab-content
+          #allproject.tab-pane.active(role='tabpanel', aria-labelledby='allproject-tab')
+            .container-fluid
+              .row
+                .ourproject-card.col-12.col-md-3
+                  img(src="")
+                  div.ourproject-card__content
+                    .ourproject-card__title
+                      p IMPULSIVE, Adobe, Printing
+                    .ourproject-card__tag
+                      p #TakeTenContest
+                    .ourporject-card__cat
+                      p / BRANDING
+                .ourproject-card.col-12.col-md-3
+                  3454
+                .ourproject-card.col-12.col-md-3
+                  546
+                .ourproject-card.col-12.col-md-3
+                  456546
+          #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+            | Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1
+            | labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft
+            | beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
+            | vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica
+            | VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+            | 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+            | stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          #contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab')
+            | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro
+            | fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone
+            | skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings
+            | gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel
+            | fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer
+            | blog stumptown. Pitchfork sustainable tofu synth chambray yr.
       section.testimonials
+        h2.main-content__heading.text-center Testimonials
       section.client
+        h2.main-content__heading.text-center Our Happy Customers
+        ul
+          +client("brand1")
+          +client("brand2")
     +footer
