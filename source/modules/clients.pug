@@ -1,2 +1,18 @@
-mixin client(name)
-  li&attributes(attributes)= name
+mixin client(href, active)
+  li(class=active): a( href=href )
+    block
+
+mixin clients(page)
+  ul.client__logo
+    +client( "" )
+      img(src="images/logo1.png")
+    +client( "" )
+      img(src="images/logo2.png")
+    +client( "" )
+      img(src="images/logo3.png")
+    +client( "" )
+      img(src="images/logo4.png")
+    +client( "" )
+      img(src="images/logo5.png")
+    +client( "" )
+      img(src="images/logo6.png")

@@ -1,0 +1,11 @@
+// ======================================================
+// Layout :: Nav Tabs
+// ======================================================
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  li {
+    display: list-item;
+  }
+}
