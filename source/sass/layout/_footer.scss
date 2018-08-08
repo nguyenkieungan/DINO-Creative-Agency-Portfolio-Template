@@ -1,3 +1,41 @@
 // ======================================================
 // Layout :: Footer
 // ======================================================
+.footer {
+  border-top: 1px solid #e9dec9;
+  max-height: 70px;
+  line-height: 70px;
+  &__nav {
+    li {
+      a {
+        color: #333;
+      }
+    }
+  }
+  &__social {
+    li {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      line-height: 30px;
+      border: 1px solid #999;
+      border-radius: 50%;
+      text-align: center;
+      a {
+        color: #999;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      a {
+        font-size: 12.49px;
+      }
+    }
+  }
+}

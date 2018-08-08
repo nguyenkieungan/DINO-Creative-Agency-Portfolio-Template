@@ -4,45 +4,31 @@ include modules/footer/footer
 include modules/head/head
 include modules/navbar/navbar
 include modules/counter/counter
+include modules/navs/navs
+include modules/clients
+include modules/testimonials/testimonials
+include modules/socials
 doctype html
 html
   +head(head.home)
   body
-    +nav("Dino Template", "dropdown_menu")
-      +nav_item( "index.html", "active" ) Home
-      +nav_item( "about.html" ) Portfolio
-      +nav_item( "service.html" ) Service
-      +nav_item( "" ) About
-      +nav_item( "" ) Blog
-      +nav_item( "" ) Contact
-        //- +nav_divider
+    + header
     div.main-content
       #carousel-example-generic2.carousel.slide.carousel-fullscreen.carousel-fade(data-ride='carousel')
         ol.carousel-indicators
           li.active(data-target='#carousel-example-generic2', data-slide-to='0')
           li(data-target='#carousel-example-generic2', data-slide-to='1')
-          li(data-target='#carousel-example-generic2', data-slide-to='2')
         .carousel-inner(role='listbox')
           .item.active
             img(src='https://bootstrapious.com/tutorial/carousel/img/carousel1.jpg')
             .overlay
             .carousel-caption
-              hh1.super-heading Lorem ipsum dolor color
-              p.super-paragraph This is a demo for the Bootstrap Carousel Guide.
+              h1.super-heading Simplicity, wit, and good typography
           .item
             img(src='https://bootstrapious.com/tutorial/carousel/img/carousel2.jpg')
             .overlay
             .carousel-caption
-              h1.super-heading Lorem ipsum dolor color
-              p.super-paragraph This is a demo for the Bootstrap Carousel Guide.
-          .item
-            img(src='https://bootstrapious.com/tutorial/carousel/img/carousel3.jpg')
-            .overlay
-            .carousel-caption
-              h1.super-heading Lorem ipsum dolor color
-              p
-                | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
-                | est. Mauris placerat eleifend leo.
+              h1.super-heading Simplicity, wit, and good typography
         // Controls
         a.left.carousel-control(href='#carousel-example-generic2', role='button', data-slide='prev')
           span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -50,25 +36,27 @@ html
         a.right.carousel-control(href='#carousel-example-generic2', role='button', data-slide='next')
           span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
           span.sr-only Next
-      section.aboutus
+      section.aboutus.bg-yellow
         .container-fluid
           .row
-            .aboutus__intro.col-12.col-md-6
-              h2.main-content__heading Dino creative agency
+            .main-content__aboutintro.col-12.col-md-6
+              h2.main-content__heading Dino creative<br/>agency
               p.main-content__detail
                 | Successful businesses have many things in common,
                 |today we’ll look at the big ‘R’of recognition and how a digital advertising network may help.
                 <br/><br/>
                 | Both walk to the far side of the room, one of them slips through the crowd easily and unnoticed as they reach the far side.
                 | The second person takes much longer to reach the far side because they are engaged in conversations along the way as they continue to meet acquaintances and friends during their path. Which type of person would you like to model your business after?
-            .aboutus__thumb.col-12.col-md-6
+            .main-content__thumb.col-12.col-md-6
               img(src='images/aboutus-thumb.png')
+          .row
+            a.btn.btn__aboutus Read more
       section.introduction
         .container
           .row
             .col-12.col-md-8
               .row
-                .introduction__goal.col-12.col-md-6
+                .main-content__goal.col-12.col-md-6
                   .main-content__icon
                     img(src='images/ic-web.png')
                   h3.main-content__ictitle Web development
@@ -76,19 +64,25 @@ html
                     | Nope! Sorry!
                     | Just sending out a few ads is not going to do it.
                     | Not if you want to be a real success.
-                .introduction__goal.col-12.col-md-6
+                  a.main-content__more
+                    img(src="images/arrow.png")
+                .main-content__goal.col-12.col-md-6
                   .main-content__icon
                     img(src='images/ic-branding.png')
                   h3.main-content__ictitle Branding
                   p.main-content__detail
                     | Becoming more common due to rapid advancement of technology and the power of globalization.
-                .introduction__goal.col-12.col-md-6
+                  a.main-content__more
+                    img(src="images/arrow.png")
+                .main-content__goal.col-12.col-md-6
                   .main-content__icon
                     img(src='images/ic-design.png')
                   h3.main-content__ictitle Design
                   p.main-content__detail
                     | Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business convention.
-                .introduction__goal.col-12.col-md-6
+                  a.main-content__more
+                    img(src="images/arrow.png")
+                .main-content__goal.col-12.col-md-6
                   .main-content__icon
                     img(src='images/ic-photo.png')
                   h3.main-content__ictitle Photography
@@ -96,16 +90,54 @@ html
                     | Nope! Sorry!
                     | Just sending out a few ads is not going to do it.
                     | Not if you want to be a real success.
-            .introduction__intro.col-12.col-md-4
-              h2.main-content__heading Make a customer, not a sale
+                  a.main-content__more
+                    img(src="images/arrow.png")
+            .introduction__intro.col-12.col-md-4.text-right
+              h2.main-content__heading Make a customer,<br/>not a sale
               p.main-content__detail
                 | You’ve a partner, a lovely child and most things aren’t running smoothly these days.
                 | You’re not feeling down or depressed but you’re quickly irritated, a bit tensed and anxious.
                 | Your spouse feels that situation and talks with you about it.
                 | You wave the problems away telling they don’t exists.
-              a.btn__introduction That's not all, check out more
+              a.btn.btn__introduction That's not all, check out more
       +counter
       section.ourproject
-      section.testimonials
+        h2.main-content__heading.text-center Our Project
+        ul#myTab1.nav.nav-tabs(role='tablist')
+          li.nav-item
+            a#allproject-tab.nav-link.active(data-toggle='tab', href='#allproject', role='tab', aria-controls='allproject', aria-selected='true') All Project
+          li.nav-item
+            a#web-tab.nav-link(data-toggle='tab', href='#web', role='tab', aria-controls='web', aria-selected='false') Web Development
+          li.nav-item
+            a#brand-tab.nav-link(data-toggle='tab', href='#brand', role='tab', aria-controls='brand', aria-selected='false') Branding
+          li.nav-item
+            a#design-tab.nav-link(data-toggle='tab', href='#design', role='tab', aria-controls='design', aria-selected='false') Design
+          li.nav-item
+            a#photo-tab.nav-link(data-toggle='tab', href='#photo', role='tab', aria-controls='photo', aria-selected='false') Photography
+        #myTab1Content.tab-content
+          #allproject.tab-pane.active(role='tabpanel', aria-labelledby='allproject-tab')
+            .container-fluid
+              .row
+                .ourproject-card.col-12.col-md-3
+                  img(src="")
+                  div.ourproject-card__content
+                    .ourproject-card__title
+                      p IMPULSIVE, Adobe, Printing
+                    .ourproject-card__tag
+                      p #TakeTenContest
+                    .ourporject-card__cat
+                      p / BRANDING
+                .ourproject-card.col-12.col-md-3
+                .ourproject-card.col-12.col-md-3
+                .ourproject-card.col-12.col-md-3
+          #web.tab-pane.fade(role='tabpanel', aria-labelledby='web-tab')
+          #brand.tab-pane.fade(role='tabpanel', aria-labelledby='brand-tab')
+          #design.tab-pane.fade(role='tabpanel', aria-labelledby='design-tab')
+          #photo.tab-pane.fade(role='tabpanel', aria-labelledby='photo-tab')
+      section.testimonials.bg-yellow
+        h2.main-content__heading.text-center Testimonials
+        +testimonials
       section.client
+        h2.main-content__heading.text-center Our Happy Customers
+        +clients
     +footer

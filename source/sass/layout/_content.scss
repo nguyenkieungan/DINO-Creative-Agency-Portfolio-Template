@@ -2,9 +2,21 @@
 // Layout :: Content
 // ======================================================
 .main-content {
+  section {
+    margin: 60px 0;
+    &:nth-of-type(1) {
+      margin: 0;
+      position: relative;
+    }
+  }
+  &__aboutintro {
+    padding-left: 120px;
+    padding-right: 50px;
+  }
   &__heading {
     font-weight: $bold;
     text-transform: uppercase;
+    line-height: 35px;
   }
   &__icon {
     float: left;
@@ -17,13 +29,23 @@
   &__ictitle {
     text-transform: uppercase;
     font-weight: $bold;
-    font-size: 12.49px;
     line-height: 47px;
     margin: 0;
+    font-size: $font-size-base;
   }
   &__detail {
     font-family: $text-font;
-    font-size: 12.49px;
     margin-top: 20px;
+    line-height: 22px;
+  }
+  &__thumb {
+    padding-right: 0;
+    padding-left: 0;
+    img {
+      width: 100%;
+    }
+  }
+  &__goal {
+    margin-bottom: 30px;
   }
 }
