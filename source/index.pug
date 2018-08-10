@@ -5,14 +5,21 @@ include modules/navbar/navbar
 include modules/counter/counter
 include modules/navs/navs
 include modules/clients
+<<<<<<< HEAD
 include modules/testimonials/testimonials
 include modules/socials
+=======
+>>>>>>> e570d8f21db54e36a180e3fdea372d12ed313609
 doctype html
 html
   +head(head.home)
   body
     + header
+<<<<<<< HEAD
     .main-content
+=======
+    div.main-content
+>>>>>>> e570d8f21db54e36a180e3fdea372d12ed313609
       #carousel-example-generic2.carousel.slide.carousel-fullscreen.carousel-fade(data-ride='carousel')
         ol.carousel-indicators
           li.active(data-target='#carousel-example-generic2', data-slide-to='0')
@@ -22,7 +29,12 @@ html
             img(src='https://bootstrapious.com/tutorial/carousel/img/carousel1.jpg')
             .overlay
             .carousel-caption
+<<<<<<< HEAD
               h1.super-heading Simplicity, wit, and good typography
+=======
+              h1.super-heading Lorem ipsum dolor color
+              p.super-paragraph This is a demo for the Bootstrap Carousel Guide.
+>>>>>>> e570d8f21db54e36a180e3fdea372d12ed313609
           .item
             img(src='https://bootstrapious.com/tutorial/carousel/img/carousel2.jpg')
             .overlay
@@ -38,15 +50,24 @@ html
       section.aboutus.bg-yellow(title='aboutus')
         .container-fluid
           .row
+<<<<<<< HEAD
             .main-content__aboutintro.col-12.col-md-6
               h2.main-content__heading Dino creative<br/>agency
+=======
+            .aboutus__intro.col-12.col-md-6.pl-0.pr-0
+              h2.main-content__heading Dino creative agency
+>>>>>>> e570d8f21db54e36a180e3fdea372d12ed313609
               p.main-content__detail
                 | Successful businesses have many things in common,
                 |today we’ll look at the big ‘R’of recognition and how a digital advertising network may help.
                 <br/><br/>
                 | Both walk to the far side of the room, one of them slips through the crowd easily and unnoticed as they reach the far side.
                 | The second person takes much longer to reach the far side because they are engaged in conversations along the way as they continue to meet acquaintances and friends during their path. Which type of person would you like to model your business after?
+<<<<<<< HEAD
             .main-content__thumb.col-12.col-md-6
+=======
+            .main-content__thumb.col-12.col-md-6.pl-0.pr-0
+>>>>>>> e570d8f21db54e36a180e3fdea372d12ed313609
               img(src='images/aboutus-thumb.png')
           .row
             a.btn.btn__aboutus Read more
@@ -127,18 +148,31 @@ html
                     .ourporject-card__cat
                       p / BRANDING
                 .ourproject-card.col-12.col-md-3
+<<<<<<< HEAD
                 .ourproject-card.col-12.col-md-3
                 .ourproject-card.col-12.col-md-3
+=======
+                  3454
+                .ourproject-card.col-12.col-md-3
+                  546
+                .ourproject-card.col-12.col-md-3
+                  456546
+>>>>>>> e570d8f21db54e36a180e3fdea372d12ed313609
           #web.tab-pane.fade(role='tabpanel', aria-labelledby='web-tab')
           #brand.tab-pane.fade(role='tabpanel', aria-labelledby='brand-tab')
           #design.tab-pane.fade(role='tabpanel', aria-labelledby='design-tab')
           #photo.tab-pane.fade(role='tabpanel', aria-labelledby='photo-tab')
+<<<<<<< HEAD
       section.testimonials.bg-yellow(title='testimonials')
         h2.main-content__heading.text-center Testimonials
         .container
           .row
             .testimonials__content.multi-slick
               +testimonials(dataTests.items)
+=======
+      section.testimonials
+        h2.main-content__heading.text-center Testimonials
+>>>>>>> e570d8f21db54e36a180e3fdea372d12ed313609
       section.client
         h2.main-content__heading.text-center Our Happy Customers
         +clients
