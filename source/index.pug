@@ -1,4 +1,3 @@
-include modules/_page-list/_page-list
 include modules/header/header
 include modules/footer/footer
 include modules/head/head
@@ -13,7 +12,7 @@ html
   +head(head.home)
   body
     + header
-    div.main-content
+    .main-content
       #carousel-example-generic2.carousel.slide.carousel-fullscreen.carousel-fade(data-ride='carousel')
         ol.carousel-indicators
           li.active(data-target='#carousel-example-generic2', data-slide-to='0')
@@ -36,7 +35,7 @@ html
         a.right.carousel-control(href='#carousel-example-generic2', role='button', data-slide='next')
           span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
           span.sr-only Next
-      section.aboutus.bg-yellow
+      section.aboutus.bg-yellow(title='aboutus')
         .container-fluid
           .row
             .main-content__aboutintro.col-12.col-md-6
@@ -134,10 +133,14 @@ html
           #brand.tab-pane.fade(role='tabpanel', aria-labelledby='brand-tab')
           #design.tab-pane.fade(role='tabpanel', aria-labelledby='design-tab')
           #photo.tab-pane.fade(role='tabpanel', aria-labelledby='photo-tab')
-      section.testimonials.bg-yellow
+      section.testimonials.bg-yellow(title='testimonials')
         h2.main-content__heading.text-center Testimonials
-        +testimonials
+        .container
+          .row
+            .testimonials__content.multi-slick
+              +testimonials(dataTests.items)
       section.client
         h2.main-content__heading.text-center Our Happy Customers
         +clients
     +footer
+      +homepage_footer

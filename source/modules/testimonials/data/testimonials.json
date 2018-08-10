@@ -1,0 +1,16 @@
+{
+  "dataTests": {
+    "items": [{
+        "imgUrl": "images/logo.png",
+        "name": "James Ross",
+        "position": "CEO - Snapchat",
+        "quote": "Was looking for a clean, responsive theme to showcase several photos/posts. Dino theme was a perfect fit and has been easy to maintain."
+      },{
+          "imgUrl": "images/logo.png",
+          "name": "James Ross",
+          "position": "CEO - Snapchat",
+          "quote": "Was looking for a clean, responsive theme to showcase several photos/posts. Dino theme was a perfect fit and has been easy to maintain."
+        }
+    ]
+  }
+}
