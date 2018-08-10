@@ -1,0 +1,53 @@
+// ======================================================
+// Layout :: Cards
+// ======================================================
+.card {
+  &__image {
+    background: #999;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+  &__info {
+    margin: 30px 0;
+  }
+  &__name {
+    color: #333;
+  }
+  &__position {
+    font-family: $text-font;
+    color: #999;
+    font-style: italic;
+  }
+  &__social {
+    li {
+      a {
+        color: #cdb380;
+        margin: 0 10px;
+      }
+    }
+  }
+  &__goal {
+    margin-bottom: 30px;
+  }
+  &__icon {
+    float: left;
+    margin-right: 10px;
+    img {
+      width: 47px;
+      height: auto;
+    }
+  }
+  &__ictitle {
+    text-transform: uppercase;
+    font-weight: $bold;
+    line-height: 47px;
+    margin: 0;
+    font-size: $font-size-base;
+  }
+  &__detail {
+    font-family: $text-font;
+    margin-top: 20px;
+    line-height: 22px;
+  }
+}

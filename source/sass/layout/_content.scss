@@ -28,26 +28,13 @@
         display: block;
       }
     }
-  }
-  &__icon {
-    float: left;
-    margin-right: 10px;
-    img {
-      width: 47px;
-      height: auto;
+    &.over {
+      position: absolute;
+      background: #fff;
+      top: 15px;
+      left: -50px;
+      padding: 20px;
     }
-  }
-  &__ictitle {
-    text-transform: uppercase;
-    font-weight: $bold;
-    line-height: 47px;
-    margin: 0;
-    font-size: $font-size-base;
-  }
-  &__detail {
-    font-family: $text-font;
-    margin-top: 20px;
-    line-height: 22px;
   }
   &__thumb {
     padding-right: 0;
@@ -56,7 +43,16 @@
       width: 100%;
     }
   }
-  &__goal {
-    margin-bottom: 30px;
+  &__detail {
+    font-family: $text-font;
+    color: #333;
+    line-height: 25px;
+    .main-about & {
+      margin-top: 150px;
+    }
+    .skill & {
+      margin-bottom: 0;
+      padding: 20px 0;
+    }
   }
 }

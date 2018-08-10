@@ -1,12 +1,40 @@
-mixin socials()
-  mixin three-socials(href)
-    li: a( href=href )
-      block
+mixin socials(href)
+  li: a( href=href )
+    block
 
+mixin three-socials()
   ul.item__social
-    +three-socials( "" )
+    +socials( "" )
       i.fa.fa-facebook(aria-hidden='true')
-    +three-socials( "" )
+    +socials( "" )
       i.fa.fa-google-plus(aria-hidden='true')
-    +three-socials( "" )
+    +socials( "" )
       i.fa.fa-twitter(aria-hidden='true')
+
+mixin five-socials()
+  ul.item__social
+    +socials( "" )
+      i.fa.fa-behance(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-globe(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-facebook(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-twitter(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-google-plus(aria-hidden='true')
+
+mixin six-socials()
+  ul.item__social
+    +socials( "" )
+      i.fa.fa-facebook(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-google-plus(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-twitter(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-behance(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-dribbble(aria-hidden='true')
+    +socials( "" )
+      i.fa.fa-instagram(aria-hidden='true')
