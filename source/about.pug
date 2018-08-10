@@ -1,0 +1,28 @@
+include modules/header/header
+include modules/footer/footer
+include modules/head/head
+include modules/navbar/navbar
+include modules/counter/counter
+include modules/navs/navs
+include modules/clients
+include modules/testimonials/testimonials
+include modules/socials
+doctype html
+html
+  +head(head.home)
+  body
+    +header
+    .main-content
+      +counter
+      section.reviews
+        .container
+          .row
+            .client.col-12.col-md-6
+              h2.main-content__heading.line Our Clients
+              +clients
+            .testimonials.col-12.col-md-6
+              h2.main-content__heading.line Testimonials
+              .testimonials__content.one-slick
+                +testimonials(dataTests.items)
+    +footer
+      +childpage_footer
