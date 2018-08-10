@@ -4,7 +4,6 @@
 .main-content {
   section {
     margin: 60px 0;
-<<<<<<< HEAD
     &[title='aboutus'] {
       margin: 0;
       position: relative;
@@ -16,8 +15,6 @@
   &__aboutintro {
     padding-left: 120px;
     padding-right: 50px;
-=======
->>>>>>> e570d8f21db54e36a180e3fdea372d12ed313609
   }
   &__heading {
     font-weight: $bold;
@@ -61,10 +58,5 @@
   }
   &__goal {
     margin-bottom: 30px;
-  }
-  &__thumb {
-    img {
-      width: 100%;
-    }
   }
 }
