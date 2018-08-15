@@ -1,0 +1,19 @@
+{
+  "dataTeams": {
+    "teams": [{
+        "imgUrl": "images/logo.png",
+        "name": "James Ross",
+        "position": "CEO - Snapchat"
+      },{
+          "imgUrl": "images/logo.png",
+          "name": "James Ross",
+          "position": "CEO - Snapchat"
+        },
+        {
+          "imgUrl": "images/logo.png",
+          "name": "James Ross",
+          "position": "CEO - Snapchat"
+        }
+    ]
+  }
+}

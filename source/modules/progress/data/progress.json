@@ -1,0 +1,22 @@
+{
+  "dataProgress": {
+    "skills": [
+      {
+        "title": "Branding",
+        "percent": "75"
+      },
+      {
+        "title": "Web Devlopment",
+        "percent": "80"
+      },
+      {
+        "title": "Photography",
+        "percent": "65"
+      },
+      {
+        "title": "Photo",
+        "percent": "85"
+      }
+    ]
+  }
+}

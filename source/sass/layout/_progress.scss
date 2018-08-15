@@ -1,0 +1,19 @@
+// ======================================================
+// Layout :: Progress
+// ======================================================
+.progress-skill {
+  &__label {
+    position: relative;
+    overflow: hidden;
+    clear: both;
+  }
+}
+.progress {
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+  .progress-bar {
+    background: #cdb380;
+    box-shadow: none;
+  }
+}

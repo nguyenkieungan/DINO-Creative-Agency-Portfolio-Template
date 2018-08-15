@@ -1,11 +1,10 @@
-mixin head(data, is_main_page)
-  head
-    title Description
-    meta(charset='utf-8')
-    meta(name='description', content='Description')
-    meta(name='keywords', content='Description')
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel='stylesheet', type='text/css', href='css/main.css')
-    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
-    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css')
+head
+  - var title = "Description"
+  meta(charset='utf-8')
+  meta(name='description', content='Description')
+  meta(name='keywords', content='Description')
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  link(rel='stylesheet', type='text/css', href='css/main.css')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css')

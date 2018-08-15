@@ -29,3 +29,19 @@ $breakpoints: (
       + 'Please make sure it is defined in `$breakpoints` map.';
   }
 }
+
+@mixin theme($name, $bgcolor, $color) {
+  .theme-#{$name} {
+    background-color: $bgcolor;
+    ul {
+      li {
+        a {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+@include theme(light, white, #333);
+@include theme(dark, #333, #fff);
