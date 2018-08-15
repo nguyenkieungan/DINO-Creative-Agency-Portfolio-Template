@@ -5,5 +5,14 @@
   background-color: $primary;
   border-radius: inherit;
   color: #fff;
-  font-size: 12.49px;
+  &__aboutus {
+    text-transform: uppercase;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 70%;
+  }
+  &__introduction {
+    float: right;
+  }
 }

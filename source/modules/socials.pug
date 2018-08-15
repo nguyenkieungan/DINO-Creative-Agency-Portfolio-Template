@@ -1,0 +1,12 @@
+mixin socials()
+  mixin three-socials(href)
+    li: a( href=href )
+      block
+
+  ul.item__social
+    +three-socials( "" )
+      i.fa.fa-facebook(aria-hidden='true')
+    +three-socials( "" )
+      i.fa.fa-google-plus(aria-hidden='true')
+    +three-socials( "" )
+      i.fa.fa-twitter(aria-hidden='true')

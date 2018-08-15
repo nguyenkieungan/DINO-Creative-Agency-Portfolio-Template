@@ -1,5 +1,14 @@
-mixin testimonials(page)
-  section.testimonials
-    .container
-      .row
-        
+mixin testimonials(items)
+  each item in items
+    .item
+      .item__avatar
+        img(src=item.imgUrl)
+      .item__info
+        .row
+          .col-md-7
+            .item__left
+              p.item__name= item.name
+              p.item__position= item.position
+          .col-md-5.text-right
+            +socials
+        p.item__quote= item.quote

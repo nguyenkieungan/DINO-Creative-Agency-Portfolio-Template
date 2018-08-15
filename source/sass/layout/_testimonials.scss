@@ -1,0 +1,35 @@
+// ======================================================
+// Layout :: Testimonials
+// ======================================================
+.testimonials {
+  &__content {
+    margin-top: 20px;
+    .item {
+      &__avatar {
+        width: 130px;
+        height: 130px;
+        background: #999;
+        position: absolute;
+      }
+      &__info {
+        background: #fff;
+        margin: 30px 30px 30px 65px;
+        padding: 10px 10px 10px 75px;
+      }
+      &__quote {
+        font-style: italic;
+        line-height: 22px;
+      }
+      &__name {
+        font-weight: $bold;
+      }
+      &__position {
+        color: #999;
+        font-style: italic;
+      }
+      &__social li {
+        margin-right: 10px;
+      }
+    }
+  }
+}

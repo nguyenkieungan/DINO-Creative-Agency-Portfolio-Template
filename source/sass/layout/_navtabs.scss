@@ -5,7 +5,22 @@
   display: flex;
   justify-content: center;
   list-style: none;
+  border-bottom: none;
+  margin-bottom: 20px;
   li {
     display: list-item;
+    a {
+      color: $primary;
+      text-transform: uppercase;
+      &:hover {
+        background-color: transparent;
+        border: none;
+      }
+    }
+    .active {
+      color: #333;
+      font-weight: $bold;
+      text-decoration: underline;
+    }
   }
 }

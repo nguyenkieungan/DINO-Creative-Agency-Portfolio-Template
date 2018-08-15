@@ -1,28 +1,48 @@
 mixin footer()
+
   //Footer
   footer.footer
-    .container
-      .row
-        .col-12.col-md-6
-          ul.footer__nav
-            +nav_item( "" ) About
-            +nav_item( "" ) Legal Information
-            +nav_item( "" ) Legal Contact
-            +nav_item( "" ) Terms Of Services
-            +nav_item( "" ) Privacy Policy
-        .col-12.col-md-6.text-right
-          ul.footer__social
-            +nav_item( "" )
-              i.fa.fa-behance(aria-hidden='true')
-            +nav_item( "" )
-              i.fa.fa-globe(aria-hidden='true')
-            +nav_item( "" )
-              i.fa.fa-facebook(aria-hidden='true')
-            +nav_item( "" )
-              i.fa.fa-twitter(aria-hidden='true')
-            +nav_item( "" )
-              i.fa.fa-google-plus(aria-hidden='true')
+    mixin homepage_footer()
+      .container
+        .row
+          .col-12.col-md-6
+            ul.footer__nav
+              +nav_item( "" ) About
+              +nav_item( "" ) Legal Information
+              +nav_item( "" ) Legal Contact
+              +nav_item( "" ) Terms Of Services
+              +nav_item( "" ) Privacy Policy
+          .col-12.col-md-6.text-right
+            ul.footer__social
+              +nav_item( "" )
+                i.fa.fa-behance(aria-hidden='true')
+              +nav_item( "" )
+                i.fa.fa-globe(aria-hidden='true')
+              +nav_item( "" )
+                i.fa.fa-facebook(aria-hidden='true')
+              +nav_item( "" )
+                i.fa.fa-twitter(aria-hidden='true')
+              +nav_item( "" )
+                i.fa.fa-google-plus(aria-hidden='true')
+    mixin childpage_footer()
+      .container
+        .row
+          .col-12.col-md-6
+            p @2016 DINO. All rights reserved
+          .col-12.col-md-6.text-right
+            ul.footer__social
+              +nav_item( "" )
+                i.fa.fa-behance(aria-hidden='true')
+              +nav_item( "" )
+                i.fa.fa-globe(aria-hidden='true')
+              +nav_item( "" )
+                i.fa.fa-facebook(aria-hidden='true')
+              +nav_item( "" )
+                i.fa.fa-twitter(aria-hidden='true')
+              +nav_item( "" )
+                i.fa.fa-google-plus(aria-hidden='true')
   //./Footer
   script(type='text/javascript', src='js/main.js')
   script(type='text/javascript', src='js/bootstrap.js')
   script(type='text/javascript', src='js/popper.min.js')
+  script(type='text/javascript', src='js/slick.min.js')

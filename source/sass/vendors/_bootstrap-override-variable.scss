@@ -5,3 +5,11 @@
 
 $font-family-sans-serif: 'Montserrat';
 $primary: #cdb380;
+$font-size-base: 13px;
+
+ul {
+  padding-left: 0;
+  li {
+    display: inline-block;
+  }
+}
