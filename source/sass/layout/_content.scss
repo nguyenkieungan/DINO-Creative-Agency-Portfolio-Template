@@ -35,6 +35,10 @@
       left: -50px;
       padding: 20px;
     }
+    .main-service & {
+      margin: 0;
+      padding: 30px 0;
+    }
   }
   &__thumb {
     padding-right: 0;

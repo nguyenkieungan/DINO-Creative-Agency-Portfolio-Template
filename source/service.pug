@@ -1,0 +1,44 @@
+include modules/header/header
+include modules/footer/footer
+include modules/head/head
+include modules/navbar/navbar
+include modules/counter/counter
+include modules/navs/navs
+include modules/clients
+include modules/socials
+include modules/cards/cards
+include modules/breadcrumb/breadcrumb
+doctype html
+html
+  +head(head.home)
+  body
+    +header
+    .main-content
+      section.main-service
+        .container
+          .row
+            .col-12.col-md-6
+              +breadcrumb({'index.html': 'Home'}, 'Services')
+              h2.main-content__heading "Well done is better<br/>than well said."
+              p.main-content__detail
+                | Hypnosis or Hypnotism, these words often puts, not surprisingly the layman in predicament.
+                | Stretch your imagination and we see wild images of a Freud-like doctor swinging a pocket watch to and fro in front of someone in deep emotional trouble?
+                | If so, don’t worry you’re not alone. This is typical movie images and far from reality.
+                <br/><br/>
+                | Hypnosis, on the contrary, is for all of us the ordinary people. And hypnosis can be used to solve wide-ranging problems.
+                | Mind you its not rocket science we cant understand. Each one of us can help ourselves with self-hypnosis.
+            .col-12.col-md-6
+              img(src="http://placehold.it/555x380")
+      section.introduction
+        .container
+          .row
+            +intro_goal(dataGoals.goals)
+      section.pricing-table
+        .container
+          .row
+            h2.main-content__heading.line.text-center Pricing Table
+      section.client
+        h2.main-content__heading.text-center Our Happy Customers
+        +clients
+    footer.footer.theme-dark
+      +footer
