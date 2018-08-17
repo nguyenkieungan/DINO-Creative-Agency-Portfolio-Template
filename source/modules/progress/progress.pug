@@ -1,0 +1,9 @@
+mixin progress(skills)
+  each skill in skills
+    - var per = skill.percent;
+    .progress-skill
+      .progress-skill__label
+        p.progress-skill__skill.pull-left= skill.title
+        p.progress-skill__percent.pull-right= skill.percent + "%"
+      .progress
+        .progress-bar(role='progressbar', style='width: ' + per + '%',  aria-valuenow=skill.percent, aria-valuemin='0', aria-valuemax='100')

@@ -15,4 +15,14 @@
   &__introduction {
     float: right;
   }
+  &__price {
+    text-transform: uppercase;
+    color: #333;
+    font-weight: $bold;
+    padding: 12px 35px;
+    .#{$this}__highlight & {
+      background: #333;
+      color: #fff;
+    }
+  }
 }

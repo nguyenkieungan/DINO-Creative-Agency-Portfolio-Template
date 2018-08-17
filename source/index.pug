@@ -7,11 +7,12 @@ include modules/navs/navs
 include modules/clients
 include modules/testimonials/testimonials
 include modules/socials
+include modules/cards/cards
 doctype html
 html
   +head(head.home)
   body
-    + header
+    +header
     .main-content
       #carousel-example-generic2.carousel.slide.carousel-fullscreen.carousel-fade(data-ride='carousel')
         ol.carousel-indicators
@@ -55,42 +56,7 @@ html
           .row
             .col-12.col-md-8
               .row
-                .main-content__goal.col-12.col-md-6
-                  .main-content__icon
-                    img(src='images/ic-web.png')
-                  h3.main-content__ictitle Web development
-                  p.main-content__detail
-                    | Nope! Sorry!
-                    | Just sending out a few ads is not going to do it.
-                    | Not if you want to be a real success.
-                  a.main-content__more
-                    img(src="images/arrow.png")
-                .main-content__goal.col-12.col-md-6
-                  .main-content__icon
-                    img(src='images/ic-branding.png')
-                  h3.main-content__ictitle Branding
-                  p.main-content__detail
-                    | Becoming more common due to rapid advancement of technology and the power of globalization.
-                  a.main-content__more
-                    img(src="images/arrow.png")
-                .main-content__goal.col-12.col-md-6
-                  .main-content__icon
-                    img(src='images/ic-design.png')
-                  h3.main-content__ictitle Design
-                  p.main-content__detail
-                    | Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business convention.
-                  a.main-content__more
-                    img(src="images/arrow.png")
-                .main-content__goal.col-12.col-md-6
-                  .main-content__icon
-                    img(src='images/ic-photo.png')
-                  h3.main-content__ictitle Photography
-                  p.main-content__detail
-                    | Nope! Sorry!
-                    | Just sending out a few ads is not going to do it.
-                    | Not if you want to be a real success.
-                  a.main-content__more
-                    img(src="images/arrow.png")
+                +intro_goal(dataGoals.goals)
             .introduction__intro.col-12.col-md-4.text-right
               h2.main-content__heading Make a customer,<br/>not a sale
               p.main-content__detail
@@ -142,5 +108,5 @@ html
       section.client
         h2.main-content__heading.text-center Our Happy Customers
         +clients
-    +footer
-      +homepage_footer
+    footer.footer.theme-light
+      +footer

@@ -1,0 +1,136 @@
+// ======================================================
+// Layout :: Cards
+// ======================================================
+$this: 'card';
+.#{$this} {
+  &__image {
+    background: #999;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+  &__info {
+    margin: 30px 0;
+  }
+  &__name {
+    color: #333;
+  }
+  &__position {
+    font-family: $text-font;
+    color: #999;
+    font-style: italic;
+  }
+  &__social {
+    li {
+      a {
+        color: #cdb380;
+        margin: 0 10px;
+      }
+    }
+  }
+  &__goal {
+    margin-bottom: 30px;
+  }
+  &__icon {
+    float: left;
+    margin-right: 10px;
+    img {
+      width: 47px;
+      height: auto;
+    }
+  }
+  &__ictitle {
+    text-transform: uppercase;
+    font-weight: $bold;
+    line-height: 47px;
+    margin: 0;
+    font-size: $font-size-base;
+  }
+  &__detail {
+    font-family: $text-font;
+    margin-top: 20px;
+    line-height: 22px;
+  }
+  &__price {
+    background: #fff;
+    margin: 60px 10px 0 10px;
+    // transition: all .7s ease-in-out;
+    // &:hover {
+    //   transform: scale(1.15);
+    // }
+  }
+  &__highlight {
+    transform: scale(1.15);
+  }
+  &__header {
+    position: relative;
+    overflow: hidden;
+    height: 90px;
+    border-bottom: 1px solid $secondary-color;
+    padding: 0 30px;
+    .#{$this}__highlight & {
+      background: #333;
+    }
+  }
+  &__title {
+    margin: 0;
+    color: $secondary-color;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: $semi-bold;
+    letter-spacing: .5px;
+    line-height: 90px;
+    .#{$this}__highlight & {
+      transform: scale(.87);
+    }
+  }
+  &__infoprice {
+    line-height: 90px;
+    .value {
+      font-size: 50px;
+      color: #333;
+      .#{$this}__highlight & {
+        color: #fff;
+      }
+    }
+    .currency {
+      vertical-align: top;
+      color: #333;
+      font-size: 20px;
+      line-height: 55px;
+      .#{$this}__highlight & {
+        color: #fff;
+      }
+    }
+    .duration {
+      color: #999;
+      font-size: 20px;
+      &:before {
+        content: '/';
+      }
+    }
+    .#{$this}__highlight & {
+      transform: scale(.87);
+    }
+  }
+  &__features {
+    margin-bottom: 0;
+    padding: 30px;
+    .#{$this}__highlight & {
+      transform: scale(.87);
+    }
+    li {
+      display: block;
+      font-family: $text-font;
+      font-size: 14px;
+      color: #333;
+      line-height: 30px;
+    }
+  }
+  &__footer {
+    padding: 0 30px 60px 30px;
+    .#{$this}__highlight & {
+      transform: scale(.87);
+    }
+  }
+}
