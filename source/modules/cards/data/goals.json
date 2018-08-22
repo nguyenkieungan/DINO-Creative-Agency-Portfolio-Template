@@ -1,0 +1,28 @@
+{
+  "dataGoals": {
+    "goals": [{
+        "icon": "images/ic-web.png",
+        "ictitle": "Web development",
+        "detail": "Nope! Sorry! Just sending out a few ads is not going to do it. Not if you want to be a real success.",
+        "link": "http://google.com"
+      },{
+          "icon": "images/ic-branding.png",
+          "ictitle": "Branding",
+          "detail": "Becoming more common due to rapid advancement of technology and the power of globalization.",
+          "link": "http://google.com"
+        },
+        {
+          "icon": "images/ic-design.png",
+          "ictitle": "Design",
+          "detail": "Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business convention.",
+          "link": "http://google.com"
+        },
+        {
+          "icon": "images/ic-photo.png",
+          "ictitle": "Photography",
+          "detail": "Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business convention.",
+          "link": "http://google.com"
+        }
+    ]
+  }
+}
