@@ -1,0 +1,23 @@
+include modules/header/header
+include modules/footer/footer
+include modules/head/head
+include modules/navbar/navbar
+include modules/navs/navs
+include modules/socials
+include modules/cards/cards
+include modules/breadcrumb/breadcrumb
+include modules/projects/projects
+doctype html
+html
+  +head(head.home)
+  body
+    +header
+    .main-content
+      section.ourproject
+        .container
+          h2.main-content__heading.line.text-center Our Project
+          +tabs(dataSubject.tabsItems)
+            each tab, index in dataSubject.tabsItems
+              +tab(index)
+    footer.footer.theme-dark
+      +footer

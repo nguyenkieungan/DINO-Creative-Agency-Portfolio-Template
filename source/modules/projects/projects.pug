@@ -1,0 +1,29 @@
+mixin tabs(tabsItems)
+  - var tabActive = function (t) { return t.active ? 'active' : ''}
+  mixin tab(index)
+    - tabsItems[index].body = block;
+  block
+  - tabsItems[0].active = tabsItems[0].active || !tabsItems.some(function (t) { return t.active; })
+  div
+    ul.nav.tabs-project(role="tablist")
+      each tab, index in tabsItems
+        li(role="presentation" class=tabActive(tab))
+          a(href="#"+"tab-id-" + index, aria-controls="tab-id-" + index, role="tab", data-toggle="tab").nav-link
+            if tab.icon
+              span.icon(class=tab.icon)
+            span= tab.title
+    .tab-content
+      each tab, index in tabsItems
+        .tab-pane(id="tab-id-" + index, role="tabpanel", class=tabActive(tab))
+          - tab.body && tab.body()
+          .row
+            each sub in tab.subproject
+              .ourproject-card.col-12.col-md-3
+                img(src=sub.imgUrl)
+                div.ourproject-card__content
+                  .ourproject-card__title
+                    p= sub.name
+                  .ourproject-card__tag
+                    p #TakeTenContest
+                  .ourporject-card__cat
+                    p / #{tab.title}

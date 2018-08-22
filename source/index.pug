@@ -8,6 +8,7 @@ include modules/clients
 include modules/testimonials/testimonials
 include modules/socials
 include modules/cards/cards
+include modules/projects/projects
 doctype html
 html
   +head(head.home)
@@ -67,38 +68,11 @@ html
               a.btn.btn__introduction That's not all, check out more
       +counter
       section.ourproject
-        h2.main-content__heading.text-center Our Project
-        ul#myTab1.nav.nav-tabs(role='tablist')
-          li.nav-item
-            a#allproject-tab.nav-link.active(data-toggle='tab', href='#allproject', role='tab', aria-controls='allproject', aria-selected='true') All Project
-          li.nav-item
-            a#web-tab.nav-link(data-toggle='tab', href='#web', role='tab', aria-controls='web', aria-selected='false') Web Development
-          li.nav-item
-            a#brand-tab.nav-link(data-toggle='tab', href='#brand', role='tab', aria-controls='brand', aria-selected='false') Branding
-          li.nav-item
-            a#design-tab.nav-link(data-toggle='tab', href='#design', role='tab', aria-controls='design', aria-selected='false') Design
-          li.nav-item
-            a#photo-tab.nav-link(data-toggle='tab', href='#photo', role='tab', aria-controls='photo', aria-selected='false') Photography
-        #myTab1Content.tab-content
-          #allproject.tab-pane.active(role='tabpanel', aria-labelledby='allproject-tab')
-            .container-fluid
-              .row
-                .ourproject-card.col-12.col-md-3
-                  img(src="")
-                  div.ourproject-card__content
-                    .ourproject-card__title
-                      p IMPULSIVE, Adobe, Printing
-                    .ourproject-card__tag
-                      p #TakeTenContest
-                    .ourporject-card__cat
-                      p / BRANDING
-                .ourproject-card.col-12.col-md-3
-                .ourproject-card.col-12.col-md-3
-                .ourproject-card.col-12.col-md-3
-          #web.tab-pane.fade(role='tabpanel', aria-labelledby='web-tab')
-          #brand.tab-pane.fade(role='tabpanel', aria-labelledby='brand-tab')
-          #design.tab-pane.fade(role='tabpanel', aria-labelledby='design-tab')
-          #photo.tab-pane.fade(role='tabpanel', aria-labelledby='photo-tab')
+        .container-fluid
+          h2.main-content__heading.text-center Our Project
+          +tabs(dataSubject.tabsItems)
+            each tab, index in dataSubject.tabsItems
+              +tab(index)
       section.testimonials.bg-yellow(title='testimonials')
         h2.main-content__heading.text-center Testimonials
         .container
