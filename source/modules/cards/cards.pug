@@ -1,16 +1,3 @@
-mixin ourteam(teams)
-  each per in teams
-    .col-12.col-md-4
-      .card
-        .card__image
-          img(src=per.imgUrl)
-        .card__info.text-center
-          p.card__name= per.name
-          p.card__position= per.position
-        .card__social.text-center
-          +six-socials
-
-
 mixin intro_goal(goals)
   each goal in goals
     .card__goal.col-12.col-md-6

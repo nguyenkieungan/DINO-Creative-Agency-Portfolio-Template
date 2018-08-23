@@ -1,7 +1,13 @@
 extends layout/page.pug
 
+include modules/head/head
+
+block head
+  +head(head.home)
+
 block header
   include modules/header/header
+
 block main
   .main-content
     #carousel-example-generic2.carousel.slide.carousel-fullscreen.carousel-fade(data-ride='carousel')
@@ -98,6 +104,7 @@ block main
     section.client
       h2.main-content__heading.text-center Our Happy Customers
       +clients
+
 block footer
-  footer.footer.theme-light
+  .theme-light
     include modules/footer/footer

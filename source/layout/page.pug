@@ -10,8 +10,9 @@ include ../modules/breadcrumb/breadcrumb
 
 doctype html
 html
-  include ../modules/head/head
+  block head
   body
-    block header
-    block main
-    block footer
+    block page
+      block header
+      block main
+      block footer
