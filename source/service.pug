@@ -1,19 +1,15 @@
-include modules/header/header
-include modules/footer/footer
+extends layout/page.pug
+
 include modules/head/head
-include modules/navbar/navbar
-include modules/counter/counter
-include modules/navs/navs
-include modules/clients
-include modules/socials
-include modules/cards/cards
-include modules/breadcrumb/breadcrumb
-doctype html
-html
+
+block head
   +head(head.home)
-  body
-    +header
-    .main-content
+
+block header
+  include modules/header/header
+
+block main
+  .main-content
       section.main-service
         .container
           .row
@@ -38,9 +34,58 @@ html
           .row
             h2.main-content__heading.line.text-center Pricing Table
           .row
-            +pricing_table(dataPrice.packs)
+            .col-12.col-md-4
+              .card__price
+                .card__header
+                  h5.card__title.pull-left Basic
+                  .card__infoprice.pull-right
+                    span.value 9.9
+                    span.currency $
+                    span.duration mo
+                .card__content
+                  ul.card__features
+                    li 1 Beautiful Website
+                    li 1 Domain name
+                    li Unlimited Bandwidth
+                    li Unlimited Pageviews
+                .card__footer
+                  a.btn.btn__price(href="google.com") Sign up
+            .col-12.col-md-4
+              .card__price.card__highlight
+                .card__header
+                  h5.card__title.pull-left Standard
+                  .card__infoprice.pull-right
+                    span.value 40
+                    span.currency $
+                    span.duration mo
+                .card__content
+                  ul.card__features
+                    li 3 Beautiful Website
+                    li 3 Domain name
+                    li Unlimited Bandwidth
+                    li Unlimited Pageviews
+                .card__footer
+                  a.btn.btn__price(href="google.com") Sign up
+            .col-12.col-md-4
+              .card__price
+                .card__header
+                  h5.card__title.pull-left Advance
+                  .card__infoprice.pull-right
+                    span.value 80
+                    span.currency $
+                    span.duration mo
+                .card__content
+                  ul.card__features
+                    li 8 Beautiful Website
+                    li 8 Domain name
+                    li Unlimited Bandwidth
+                    li Unlimited Pageviews
+                .card__footer
+                  a.btn.btn__price(href="google.com") Sign up
       section.client
         h2.main-content__heading.text-center Our Happy Customers
         +clients
-    footer.footer.theme-dark
-      +footer
+
+block footer
+  .theme-dark
+    include modules/footer/footer

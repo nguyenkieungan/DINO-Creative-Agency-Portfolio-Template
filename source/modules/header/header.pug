@@ -1,12 +1,11 @@
-mixin header(page)
-  .header
-    .container
-      .row
-        +nav("Dino", "dropdown_menu")
-          +nav_item( "index.html", "active" ) Home
-          +nav_item( "protfolio.html" ) Portfolio
-          +nav_item( "service.html" ) Service
-          +nav_item( "about.html" ) About
-          +nav_item( "" ) Blog
-          +nav_item( "" ) Contact
-            //- +nav_divider
+header.header
+  .container
+    .row
+      +nav("Dino", "dropdown_menu")
+        +nav_item( "index.html", "active" ) Home
+        +nav_item( "" ) Portfolio
+        +nav_item( "service.html" ) Service
+        +nav_item( "about.html" ) About
+        +nav_item( "" ) Blog
+        +nav_item( "" ) Contact
+          //- +nav_divider

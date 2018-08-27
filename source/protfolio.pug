@@ -1,23 +1,22 @@
-include modules/header/header
-include modules/footer/footer
+extends layout/page.pug
+
 include modules/head/head
-include modules/navbar/navbar
-include modules/navs/navs
-include modules/socials
-include modules/cards/cards
-include modules/breadcrumb/breadcrumb
-include modules/projects/projects
-doctype html
-html
+
+block head
   +head(head.home)
-  body
-    +header
-    .main-content
-      section.ourproject
-        .container
-          h2.main-content__heading.line.text-center Our Project
-          +tabs(dataSubject.tabsItems)
-            each tab, index in dataSubject.tabsItems
-              +tab(index)
-    footer.footer.theme-dark
-      +footer
+
+block header
+  include modules/header/header
+
+block main
+  .main-content
+    section.ourproject
+      .container
+        h2.main-content__heading.line.text-center Our Project
+        +tabs(dataSubject.tabsItems)
+          each tab, index in dataSubject.tabsItems
+            +tab(index)
+
+block footer
+  .theme-light
+    include modules/footer/footer
