@@ -1,7 +1,13 @@
 extends layout/page.pug
 
+include modules/head/head
+
+block head
+  +head(head.home)
+
 block header
   include modules/header/header
+
 block main
   .main-content
     section.main-about
@@ -36,7 +42,51 @@ block main
       .row
         h2.main-content__heading.line.text-center Our Team
       .row
-        +ourteam(dataTeams.teams)
+        .col-12.col-md-4
+          .card
+            .card__image
+              img(src="asset/images/logo.png")
+            .card__info.text-center
+              p.card__name James Ross
+              p.card__position CEO - Snapchat
+            .card__social.text-center
+              ul.item__social
+                li: a: i.fa.fa-facebook(aria-hidden='true')
+                li: a: i.fa.fa-google-plus(aria-hidden='true')
+                li: a: i.fa.fa-twitter(aria-hidden='true')
+                li: a: i.fa.fa-behance(aria-hidden='true')
+                li: a: i.fa.fa-dribbble(aria-hidden='true')
+                li: a: i.fa.fa-instagram(aria-hidden='true')
+        .col-12.col-md-4
+          .card
+            .card__image
+              img(src="asset/images/logo.png")
+            .card__info.text-center
+              p.card__name James Ross
+              p.card__position CEO - Snapchat
+            .card__social.text-center
+              ul.item__social
+                li: a: i.fa.fa-facebook(aria-hidden='true')
+                li: a: i.fa.fa-google-plus(aria-hidden='true')
+                li: a: i.fa.fa-twitter(aria-hidden='true')
+                li: a: i.fa.fa-behance(aria-hidden='true')
+                li: a: i.fa.fa-dribbble(aria-hidden='true')
+                li: a: i.fa.fa-instagram(aria-hidden='true')
+        .col-12.col-md-4
+          .card
+            .card__image
+              img(src="asset/images/logo.png")
+            .card__info.text-center
+              p.card__name James Ross
+              p.card__position CEO - Snapchat
+            .card__social.text-center
+              ul.item__social
+                li: a: i.fa.fa-facebook(aria-hidden='true')
+                li: a: i.fa.fa-google-plus(aria-hidden='true')
+                li: a: i.fa.fa-twitter(aria-hidden='true')
+                li: a: i.fa.fa-behance(aria-hidden='true')
+                li: a: i.fa.fa-dribbble(aria-hidden='true')
+                li: a: i.fa.fa-instagram(aria-hidden='true')
     +counter
     section.reviews
       .container
@@ -48,6 +98,7 @@ block main
             h2.main-content__heading.line Testimonials
             .testimonials__content.one-slick
               +testimonials(dataTests.items)
+
 block footer
-  footer.footer.theme-light
+  .theme-dark
     include modules/footer/footer

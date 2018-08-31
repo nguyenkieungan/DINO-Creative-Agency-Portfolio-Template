@@ -1,0 +1,25 @@
+{
+  "dataPrice": {
+    "packs": [{
+        "title": "Basic",
+        "notice": "",
+        "value": "9.9",
+        "webcount": "1",
+        "domaincount": "1"
+      },{
+          "title": "Standard",
+          "notice": "Most popular",
+          "value": "40",
+          "webcount": "3",
+          "domaincount": "3"
+        },
+        {
+            "title": "Basic",
+            "notice": "",
+            "value": "80",
+            "webcount": "8",
+            "domaincount": "8"
+        }
+    ]
+  }
+}
